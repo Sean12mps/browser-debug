@@ -84,8 +84,14 @@ class Browser_Debug {
 
 		$this->global_manager = Browser_Debug_Global::get_instance();
 
+		//	Scripts
 		add_action( 'wp_enqueue_scripts', array( $this->global_manager, 'register_scripts' ), 10 );
-		add_action( 'wp_enqueue_scripts', array( $this->global_manager, 'enqueue_scripts' ), 99 );
+		add_action( 'wp_enqueue_scripts', array( $this->global_manager, 'enqueue_styles' ), 15 );
+		add_action( 'wp_footer', array( $this->global_manager, 'enqueue_scripts' ), 100000 );
+		add_action( 'browser_debug', array( $this->global_manager, 'add_debug_vars' ), 10, 3 );
+
+		//	Admin bar
+		add_action( 'admin_bar_menu', array( $this->global_manager, 'browser_debug_admin_bar_menu' ), 999 );
 
 	}
 

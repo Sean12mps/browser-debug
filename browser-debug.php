@@ -22,6 +22,7 @@ function start_bro_dbg() {
 
 	define( 'BRO_DBG_VERSION', '1.0.0' );
 	define( 'BRO_DBG_SCRIPT_VERSION', '1.0.0' );
+	define( 'BRO_DBG_STYLE_VERSION', '1.0.0' );
 	define( 'BRO_DBG_PATH', plugin_dir_path( __FILE__ ) );
 	define( 'BRO_DBG_URL', plugin_dir_url( __FILE__ ) );
 

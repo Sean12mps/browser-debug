@@ -1,0 +1,5 @@
+#wpadminbar #wp-admin-bar-browser_debug .ab-icon:before {
+	content: "\f121";
+	top: 1px;
+	font-size: 17px;
+}
