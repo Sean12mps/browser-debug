@@ -7,11 +7,12 @@ const printAllDebugVars = () => {
 		switch ( elem.mode ) {
 
 			case 'log':
-				console.log( '\n%o | %o \nDebug: %o \nTrace: %o \n\n\n', 
+				// console.log( '\n%o | %o \nDebug: %o \nTrace: %o \n\n\n', 
+				console.log( '\n%o | %o \nDebug: %o\n\n\n', 
 					elem.title,
 					elem.type,
 					elem.vars,
-					elem.source,
+					// elem.source,
 				);
 				break;
 

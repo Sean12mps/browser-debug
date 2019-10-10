@@ -108,7 +108,7 @@ class Browser_Debug_Global {
 			'title' => $key,
 			'type' => gettype( $vars ),
 			'vars' => $vars,
-			'source' => debug_backtrace(),
+			// 'source' => debug_backtrace(),
 			'mode' => $mode,
 		);
 		// var_dump($this->debug_vars);
