@@ -1,7 +1,7 @@
 <?php 
 
 /**
- * Enqueue global scripts.
+ * Add debug variables.
  *
  * @since    1.0.0
  *
@@ -19,3 +19,22 @@ function add_dbg( $key, $vars, $mode = 'log' ) {
 	
 }
 
+
+/**
+ * Just a quick pretty var_dump.
+ *
+ * @since    1.0.0
+ *
+ * @param    mixed     $vars   The object to debug.
+ * @param    bool      $exit   To exit or not after printing debug vars.
+ *
+ * @return   N/A
+ */
+function bd_var_dump( $vars, $exit = false ) {
+
+	echo "<pre>";
+	var_dump($vars);
+	echo "</pre>";
+
+	if ( $exit ) exit;
+}

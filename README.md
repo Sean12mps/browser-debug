@@ -24,6 +24,18 @@ Usage Example:
 add_dbg( $title, $variable_to_debug );
 ```  
   
+## Quick Debug Function  
+Works the same as var_dump but with code blocks wrapping the debug variable.  
+  
+Usage Example:  
+```
+// Normal var_dump
+bd_var_dump( $GLOBALS['wp_filter'] );
+
+// Normal var_dump then exit
+bd_var_dump( $GLOBALS['wp_filter'], true );
+```  
+  
 # Tools  
 If you're logged in, check out the wp-admin bar for Browser Debug menu item. Clicking on "Show All Logs" will reprint all of the debug variables added earlier.  
   

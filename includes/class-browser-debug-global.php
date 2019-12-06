@@ -102,16 +102,12 @@ class Browser_Debug_Global {
 	 */
 	public function add_debug_vars( $key, $vars, $mode = 'log' ) {
 
-		// var_dump('varsxxxx - '. $key);
-
 		$this->debug_vars[] = array(
 			'title' => $key,
 			'type' => gettype( $vars ),
 			'vars' => $vars,
-			// 'source' => debug_backtrace(),
 			'mode' => $mode,
 		);
-		// var_dump($this->debug_vars);
 
 	}
 

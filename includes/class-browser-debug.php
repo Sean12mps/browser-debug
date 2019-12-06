@@ -71,6 +71,11 @@ class Browser_Debug {
 	 */
 	public function define_admin_manager() {
 
+		$this->global_manager = Browser_Debug_Global::get_instance();
+
+		add_action( 'admin_enqueue_scripts', array( $this->global_manager, 'register_scripts' ), 10 );
+		add_action( 'admin_footer', array( $this->global_manager, 'enqueue_scripts' ), 10 );
+
 	}
 
 	/**
